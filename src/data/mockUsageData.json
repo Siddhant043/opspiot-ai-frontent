@@ -1,0 +1,67 @@
+{
+  "daily": {
+    "tokens": 12430,
+    "cost": 0.23,
+    "usageOverTime": [
+      { "date": "2026-01-01", "tokens": 42000 },
+      { "date": "2026-01-02", "tokens": 51000 },
+      { "date": "2026-01-03", "tokens": 47000 },
+      { "date": "2026-01-04", "tokens": 48500 },
+      { "date": "2026-01-05", "tokens": 52000 },
+      { "date": "2026-01-06", "tokens": 49000 },
+      { "date": "2026-01-07", "tokens": 44500 }
+    ],
+    "byModel": [
+      { "model": "GPT-4", "tokens": 144000, "percentage": 62 },
+      { "model": "GPT-3.5", "tokens": 65000, "percentage": 28 },
+      { "model": "Claude", "tokens": 23000, "percentage": 10 }
+    ]
+  },
+  "weekly": {
+    "tokens": 87210,
+    "cost": 1.61,
+    "usageOverTime": [
+      { "date": "2025-12-23", "tokens": 285000 },
+      { "date": "2025-12-30", "tokens": 302000 },
+      { "date": "2026-01-06", "tokens": 294000 },
+      { "date": "2026-01-13", "tokens": 310000 }
+    ],
+    "byModel": [
+      { "model": "GPT-4", "tokens": 612000, "percentage": 60 },
+      { "model": "GPT-3.5", "tokens": 318000, "percentage": 31 },
+      { "model": "Claude", "tokens": 91000, "percentage": 9 }
+    ]
+  },
+  "monthly": {
+    "tokens": 232000,
+    "cost": 18.72,
+    "usageOverTime": [
+      { "date": "2025-09-01", "tokens": 1850000 },
+      { "date": "2025-10-01", "tokens": 2100000 },
+      { "date": "2025-11-01", "tokens": 1950000 },
+      { "date": "2025-12-01", "tokens": 2280000 },
+      { "date": "2026-01-01", "tokens": 2320000 }
+    ],
+    "byModel": [
+      { "model": "GPT-4", "tokens": 5760000, "percentage": 62 },
+      { "model": "GPT-3.5", "tokens": 2700000, "percentage": 29 },
+      { "model": "Claude", "tokens": 860000, "percentage": 9 }
+    ]
+  },
+  "yearly": {
+    "tokens": 2784000,
+    "cost": 224.64,
+    "usageOverTime": [
+      { "date": "2022-01-01", "tokens": 8500000 },
+      { "date": "2023-01-01", "tokens": 12500000 },
+      { "date": "2024-01-01", "tokens": 18900000 },
+      { "date": "2025-01-01", "tokens": 22400000 },
+      { "date": "2026-01-01", "tokens": 27840000 }
+    ],
+    "byModel": [
+      { "model": "GPT-4", "tokens": 69120000, "percentage": 62 },
+      { "model": "GPT-3.5", "tokens": 32320000, "percentage": 29 },
+      { "model": "Claude", "tokens": 10320000, "percentage": 9 }
+    ]
+  }
+}

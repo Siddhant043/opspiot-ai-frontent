@@ -478,7 +478,7 @@ function RouteComponent() {
                     className="cursor-pointer hover:bg-muted/50"
                     onClick={() => {
                       // In real implementation, this would load the agent run details
-                      toast.loading(`Viewing details for ${item.id}`);
+                      toast.success(`Viewing details for ${item.id}`);
                     }}
                   >
                     <TableCell className="font-medium">{item.task}</TableCell>

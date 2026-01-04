@@ -1,0 +1,62 @@
+{
+  "conversations": [
+    {
+      "id": "conv_1",
+      "title": "Refund Policy"
+    },
+    {
+      "id": "conv_2",
+      "title": "Weekly Sales Report"
+    }
+  ],
+  "messages": {
+    "conv_1": [
+      {
+        "id": "msg_1",
+        "role": "user",
+        "content": "How do refunds work?"
+      },
+      {
+        "id": "msg_2",
+        "role": "assistant",
+        "content": "Refunds are processed within 14 days",
+        "streaming": true,
+        "sources": [
+          {
+            "name": "refund_policy.pdf"
+          }
+        ],
+        "tools": [
+          {
+            "name": "DB Query",
+            "status": "success"
+          },
+          {
+            "name": "Email Send",
+            "status": "running"
+          }
+        ]
+      }
+    ],
+    "conv_2": [
+      {
+        "id": "msg_3",
+        "role": "user",
+        "content": "Generate weekly sales report"
+      },
+      {
+        "id": "msg_4",
+        "role": "assistant",
+        "content": "I'll generate the weekly sales report for you.",
+        "streaming": false,
+        "sources": [],
+        "tools": [
+          {
+            "name": "DB Query",
+            "status": "success"
+          }
+        ]
+      }
+    ]
+  }
+}

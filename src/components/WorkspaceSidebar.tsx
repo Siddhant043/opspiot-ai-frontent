@@ -41,8 +41,7 @@ const sidebarItems = [
   {
     icon: MessageSquareIcon,
     label: "Chat",
-    href: "/chat",
-    collapsible: true,
+    href: "/chats",
   },
   {
     icon: FileText,
@@ -134,56 +133,16 @@ const WorkspaceSidebar = () => {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {sidebarItems.map((item) =>
-                item.collapsible ? (
-                  <Collapsible
-                    key={item.label}
-                    defaultOpen={isOpen}
-                    className="group/collapsible"
+              {sidebarItems.map((item) => (
+                <SidebarMenuItem key={item.label}>
+                  <SidebarMenuButton
+                    onClick={() => onSidebarItemClick(item.href)}
                   >
-                    <SidebarMenuItem>
-                      <CollapsibleTrigger asChild>
-                        <SidebarMenuButton
-                          onClick={() => setIsOpen((prev) => !prev)}
-                        >
-                          <item.icon className="w-4 h-4" />
-                          {item.label}
-                          {isOpen ? (
-                            <ChevronDown className="ml-auto" />
-                          ) : (
-                            <ChevronRight className="ml-auto" />
-                          )}
-                        </SidebarMenuButton>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <SidebarMenuSub>
-                          <SidebarMenuSubItem>
-                            <SidebarMenuButton
-                              onClick={() =>
-                                navigate({
-                                  to: "/workspaces/$workspaceId/chats",
-                                  params: { workspaceId: selectedWorkspace.id },
-                                })
-                              }
-                            >
-                              New Chat
-                            </SidebarMenuButton>
-                          </SidebarMenuSubItem>
-                        </SidebarMenuSub>
-                      </CollapsibleContent>
-                    </SidebarMenuItem>
-                  </Collapsible>
-                ) : (
-                  <SidebarMenuItem key={item.label}>
-                    <SidebarMenuButton
-                      onClick={() => onSidebarItemClick(item.href)}
-                    >
-                      <item.icon className="w-4 h-4" />
-                      {item.label}
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                )
-              )}
+                    <item.icon className="w-4 h-4" />
+                    {item.label}
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

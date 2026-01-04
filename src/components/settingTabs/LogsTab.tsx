@@ -729,13 +729,13 @@ const LogsTab = () => {
 
       {/* Pagination */}
       {filteredLogs.length > 0 && (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-4">
           <div className="text-sm text-muted-foreground">
             Showing {(currentPage - 1) * pageSize + 1} to{" "}
             {Math.min(currentPage * pageSize, filteredLogs.length)} of{" "}
             {filteredLogs.length} logs
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mr-4">
             <Button
               variant="outline"
               size="sm"
