@@ -9,8 +9,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubItem,
   SidebarSeparator,
 } from "./ui/sidebar";
 import {
@@ -22,7 +20,6 @@ import {
 import {
   ChartColumnIcon,
   ChevronDown,
-  ChevronRight,
   FileText,
   MessageSquareIcon,
   SettingsIcon,
@@ -31,11 +28,6 @@ import {
 import { useEffect, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { toast } from "react-hot-toast";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "./ui/collapsible";
 
 const sidebarItems = [
   {
@@ -70,7 +62,6 @@ const footerItems = [
 
 const WorkspaceSidebar = () => {
   const { selectedWorkspace, workspaces } = useWorkspaceStore((state) => state);
-  const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate();
   useEffect(() => {
     if (selectedWorkspace === null || workspaces.length === 0) {

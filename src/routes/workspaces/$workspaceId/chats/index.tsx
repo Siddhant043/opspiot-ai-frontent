@@ -327,7 +327,7 @@ function RouteComponent() {
                       <div className="flex justify-start">
                         <div className="max-w-[85%] md:max-w-[75%] bg-muted/30 border border-border/50 rounded-none p-4">
                           <div className="flex items-center gap-2 mb-3">
-                            <div className="flex items-center justify-center w-5 h-5 rounded-none bg-yellow-500/10">
+                            <div className="flex items-center justify-center w-5 h-5 rounded-none">
                               <WrenchIcon className="w-3.5 h-3.5 text-yellow-600 dark:text-yellow-400" />
                             </div>
                             <span className="text-xs font-semibold text-foreground">
@@ -338,9 +338,9 @@ function RouteComponent() {
                             {message.tools.map((tool, index) => (
                               <div
                                 key={index}
-                                className="flex items-center justify-between py-1.5 px-2 bg-background/50 rounded-none"
+                                className="flex items-center justify-between py-1.5 px-2 bg-background/50 rounded-none gap-2"
                               >
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center">
                                   <span className="text-xs font-medium text-foreground">
                                     {tool.name}
                                   </span>
